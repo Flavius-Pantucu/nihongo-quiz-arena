@@ -8,6 +8,7 @@ export default function BarsIcon(props) {
       viewBox='0 0 24 24'
       strokeWidth={props.strokeWidth}
       stroke='currentColor'
+      onClick={props.onClick}
       className={cn("", props.className)}>
       <path
         strokeLinecap='round'
