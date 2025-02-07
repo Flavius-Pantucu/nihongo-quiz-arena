@@ -10,19 +10,24 @@ export default function Container() {
 
   return (
     <div className='w-full h-screen'>
-      {/* <Navbar
-        className='absolute left-0 top-0 w-[100%] h-[8%] lg:h-[4%] flex flex-row flex-wrap justify-between gap-y-2 px-4 lg:px-6 my-2 lg:my-4'
-        setSidebar={setSidebar}
-        sidebar={sidebar}
-      /> */}
-      <Sidebar
-        className={`absolute left-0 top-0 lg-[20%] h-full flex flex-col justify-start items-start gap-y-2 px-4 lg:px-6 my-2 lg:my-4`}
+      <Navbar
+        className='absolute left-0 top-0 w-[100%] h-[10%] lg:h-[5%] min-h-[40px] flex flex-row flex-wrap justify-between gap-y-2 px-4 lg:px-6'
         setSidebar={setSidebar}
         sidebar={sidebar}
       />
-      {/* <Content
-        className={`w-[100%] lg:w-[60%] h-[95%] flex flex-row justify-center items-start`}
-      /> */}
+
+      <Sidebar
+        className={`absolute left-0 top-0 w-[45%] lg:w-[20%] h-full flex flex-col justify-start items-start gap-y-2 px-4 lg:px-6 bg-[#1b263b] transition-all duration-300 ease-in-out 
+          ${
+            sidebar
+              ? "translate-x-0 opacity-100"
+              : "-translate-x-full opacity-0"
+          }`}
+        setSidebar={setSidebar}
+        sidebar={sidebar}
+      />
+
+      <Content className={`w-[100%] h-[100%]`} />
     </div>
   );
 }
