@@ -12,7 +12,7 @@ export default function Sidebar(props) {
     <div className={cn("", props.className)}>
       <div className='flex justify-start items-center gap-4 h-14 lg:h-20'>
         <BarsIcon
-          className='cursor-pointer size-6 lg:size-8 hover:scale-110 transition-transform duration-200 ease-in-out'
+          className='cursor-pointer size-8 hover:scale-110 transition-transform duration-200 ease-in-out'
           strokeWidth={1.5}
           onClick={() => props.setSidebar(!props.sidebar)}
         />
@@ -25,7 +25,7 @@ export default function Sidebar(props) {
       </div>
       <div className='flex flex-col w-full gap-y-2 pt-4'>
         <div className='flex flex-row justify-start items-start w-[100%] max-w-[200px] cursor-pointer gap-x-6 rounded-lg p-2 text-slate-300 hover:bg-slate-600 hover:text-[#f89b44] transition-colors ease-in-out duration-300'>
-          <div className='size-4 lg:size-6'>
+          <div className='size-6'>
             <HomeIcon
               className='w-full h-full'
               strokeWidth='2'
@@ -35,7 +35,7 @@ export default function Sidebar(props) {
         </div>
         <div className='flex flex-row justify-start items-start w-[100%] max-w-[200px] cursor-pointer gap-x-6 rounded-lg p-2 text-slate-300 hover:bg-slate-600 hover:text-[#f89b44] transition-colors ease-in-out duration-300'>
           <FolderIcon
-            className='size-4 lg:size-6'
+            className='size-6'
             strokeWidth='2'
           />
           <span>Browse</span>
@@ -43,21 +43,21 @@ export default function Sidebar(props) {
         <div className='border-[1.5px] w-full max-w-[200px] rounded-lg border-slate-700'></div>
         <div className='flex flex-row justify-start items-start w-[100%] max-w-[200px] cursor-pointer gap-x-6 rounded-lg p-2 text-slate-300 hover:bg-slate-600 hover:text-[#f89b44] transition-colors ease-in-out duration-300'>
           <LearnIcon
-            className='size-4 lg:size-6'
+            className='size-6'
             strokeWidth='2'
           />
           <span>Learn</span>
         </div>
         <div className='flex flex-row justify-start items-start w-[100%] max-w-[200px] cursor-pointer gap-x-6 rounded-lg p-2 text-slate-300 hover:bg-slate-600 hover:text-[#f89b44] transition-colors ease-in-out duration-300'>
           <QuizIcon
-            className='size-4 lg:size-6'
+            className='size-6'
             strokeWidth='2'
           />
           <span>Quiz</span>
         </div>
         <div className='flex flex-row justify-start items-start w-[100%] max-w-[200px] cursor-pointer gap-x-6 rounded-lg p-2 text-slate-300 hover:bg-slate-600 hover:text-[#f89b44] transition-colors ease-in-out duration-300'>
           <FlashcardIcon
-            className='size-4 lg:size-6'
+            className='size-6'
             strokeWidth='2'
           />
           <span>Flashcards</span>
