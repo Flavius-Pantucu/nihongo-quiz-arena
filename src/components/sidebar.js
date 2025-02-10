@@ -10,7 +10,7 @@ import { cn } from "@/utils/cn";
 export default function Sidebar(props) {
   return (
     <div className={cn("", props.className)}>
-      <div className='flex justify-start items-center gap-4 h-[5%] min-h-[40px]'>
+      <div className='flex justify-start items-center gap-4 h-14 lg:h-20'>
         <BarsIcon
           className='cursor-pointer size-6 lg:size-8 hover:scale-110 transition-transform duration-200 ease-in-out'
           strokeWidth={1.5}
