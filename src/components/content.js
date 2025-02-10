@@ -1,4 +1,5 @@
 import { cn } from "@/utils/cn";
+import Sidebar from "./sidebar";
 export default function Content(props) {
   return (
     <div className={cn("", props.className)}>
