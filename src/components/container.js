@@ -41,13 +41,13 @@ export default function Container() {
         sidebarRef={sidebarRef}
       />
       <Navbar
-        className={`sticky left-0 top-0 w-[100%] h-28 lg:h-20 flex flex-row flex-wrap justify-between gap-y-2 px-4 lg:px-6 pt-4 lg:pt-2 transition-opacity duration-200 ease-in-out z-[9]
+        className={`sticky left-0 top-0 w-[100%] h-28 lg:h-20 flex flex-row flex-wrap justify-between gap-y-2 px-4 lg:px-6 pt-4 lg:pt-2 bg-[#1b263b] transition-opacity duration-200 ease-in-out z-[9]
         ${sidebar ? "opacity-20" : "opacity-100"}`}
         setSidebar={setSidebar}
         sidebar={sidebar}
       />
       <Content
-        className={`w-full h-auto pt-6 transition-opacity duration-200 ease-in-out z-[8]
+        className={`w-full h-auto flex flex-row pt-6 transition-opacity duration-200 ease-in-out z-[8]
         ${sidebar ? "opacity-20" : "opacity-100"}`}
         setSidebar={setSidebar}
         sidebar={sidebar}
