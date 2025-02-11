@@ -4,15 +4,24 @@ import PlusIcon from "./icons/plus";
 import SearchInput from "./icons/searchInput";
 import { cn } from "@/lib/utils";
 import UserIcon from "./icons/user";
+import { Dispatch, SetStateAction } from "react";
 
-export default function Navbar(props) {
+export default function Navbar({
+  sidebar,
+  setSidebar,
+}: {
+  sidebar: boolean;
+  setSidebar: Dispatch<SetStateAction<boolean>>;
+}) {
   return (
-    <div className={cn("", props.className)}>
+    <div
+      className={`sticky left-0 top-0 w-[100%] h-28 lg:h-20 flex flex-row flex-wrap justify-between gap-y-2 px-4 lg:px-6 pt-4 lg:pt-2 bg-[#1b263b] transition-opacity duration-200 ease-in-out z-[9]
+    ${sidebar ? "opacity-20" : "opacity-100"}`}>
       <div className='w-[50%] lg:w-[33%] h-[50%] lg:h-full flex justify-start items-center gap-4'>
         <BarsIcon
           className='cursor-pointer size-8 hover:scale-110 transition-transform duration-200 ease-in-out text-white'
           strokeWidth={1.5}
-          onClick={() => props.setSidebar(!props.sidebar)}
+          onClick={() => setSidebar(!sidebar)}
         />
         <Image
           src={"/nqa.png"}

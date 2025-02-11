@@ -6,17 +6,27 @@ import HomeIcon from "./icons/home";
 import LearnIcon from "./icons/learn";
 import QuizIcon from "./icons/quiz";
 import { cn } from "@/lib/utils";
+import { Dispatch, RefObject, SetStateAction } from "react";
 
-export default function Sidebar(props) {
+export default function Sidebar({
+  sidebar,
+  setSidebar,
+  sidebarRef,
+}: {
+  sidebar: boolean;
+  setSidebar: Dispatch<SetStateAction<boolean>>;
+  sidebarRef: RefObject<HTMLDivElement>;
+}) {
   return (
     <div
-      className={cn("", props.className)}
-      ref={props.sidebarRef}>
+      className={`absolute left-0 top-0 w-[30%] lg:w-[10%] min-w-[250px] h-full flex flex-col justify-start items-start gap-y-2 px-4 lg:px-6 pt-4 lg:pt-2 bg-[#1b263b] border-r-[2.5px] border-slate-700 transition-all duration-300 ease-in-out z-10 
+    ${sidebar ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
+      ref={sidebarRef}>
       <div className='flex justify-start items-center gap-4 h-14 lg:h-[72px]'>
         <BarsIcon
           className='cursor-pointer size-8 hover:scale-110 transition-transform duration-200 ease-in-out text-white'
           strokeWidth={1.5}
-          onClick={() => props.setSidebar(!props.sidebar)}
+          onClick={() => setSidebar(!sidebar)}
         />
         <Image
           src={"/nqa.png"}

@@ -5,9 +5,9 @@ import HomeIcon from "./icons/home";
 import LearnIcon from "./icons/learn";
 import QuizIcon from "./icons/quiz";
 
-export default function ContentSidebar(props) {
+export default function ContentSidebar() {
   return (
-    <div className={cn("", props.className)}>
+    <div className='hidden lg:flex w-40 flex-col pl-4 lg:pl-6 gap-y-2'>
       <div className='group/item w-full h-full flex flex-row gap-x-2'>
         <div className='w-auto h-auto cursor-pointer rounded-lg p-2 text-slate-300 hover:bg-slate-600 hover:text-[#f89b44] transition-colors ease-in-out duration-300 '>
           <HomeIcon
