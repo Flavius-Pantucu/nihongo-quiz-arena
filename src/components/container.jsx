@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Navbar from "./navbar";
 import Sidebar from "./sidebar";
+import Navbar from "./navbar";
 import Content from "./content";
 
 export default function Container() {

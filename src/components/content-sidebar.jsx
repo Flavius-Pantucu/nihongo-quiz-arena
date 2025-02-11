@@ -1,4 +1,4 @@
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import FlashcardIcon from "./icons/flashcard";
 import FolderIcon from "./icons/folder";
 import HomeIcon from "./icons/home";

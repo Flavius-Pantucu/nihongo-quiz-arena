@@ -5,7 +5,7 @@ import FolderIcon from "./icons/folder";
 import HomeIcon from "./icons/home";
 import LearnIcon from "./icons/learn";
 import QuizIcon from "./icons/quiz";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 export default function Sidebar(props) {
   return (

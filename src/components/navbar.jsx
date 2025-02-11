@@ -2,8 +2,8 @@ import Image from "next/image";
 import BarsIcon from "./icons/bars";
 import PlusIcon from "./icons/plus";
 import SearchInput from "./icons/searchInput";
+import { cn } from "@/lib/utils";
 import UserIcon from "./icons/user";
-import { cn } from "@/utils/cn";
 
 export default function Navbar(props) {
   return (
@@ -28,8 +28,8 @@ export default function Navbar(props) {
           strokeWidth={1}
         />
         <UserIcon
-          className='cursor-pointer size-8 hover:scale-110 transition-transform duration-200 ease-in-out text-white'
-          strokeWidth={1.5}
+          className='cursor-pointer size-8 hover:scale-110 transition-all duration-500 ease-in-out text-white'
+          strokeWidth={1}
         />
       </div>
       <SearchInput className='flex w-[100%] h-[50%] lg:hidden justify-center items-center' />
