@@ -14,7 +14,7 @@ export default function Sidebar(props) {
       ref={props.sidebarRef}>
       <div className='flex justify-start items-center gap-4 h-14 lg:h-[72px]'>
         <BarsIcon
-          className='cursor-pointer size-8 hover:scale-110 transition-transform duration-200 ease-in-out'
+          className='cursor-pointer size-8 hover:scale-110 transition-transform duration-200 ease-in-out text-white'
           strokeWidth={1.5}
           onClick={() => props.setSidebar(!props.sidebar)}
         />
