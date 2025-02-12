@@ -43,7 +43,12 @@ export default function Container() {
         setSignUp={setSignUp}
       />
       <Content sidebar={sidebar} />
-      {signUp && <SignUp />}
+      {signUp && (
+        <SignUp
+          signUp={signUp}
+          setSignUp={setSignUp}
+        />
+      )}
     </div>
   );
 }
