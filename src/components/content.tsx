@@ -1,6 +1,4 @@
-import { cn } from "@/lib/utils";
 import ContentSidebar from "./content-sidebar";
-import { Dispatch, SetStateAction } from "react";
 
 export default function Content({ sidebar }: { sidebar: boolean }) {
   return (

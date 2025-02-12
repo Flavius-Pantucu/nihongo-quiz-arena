@@ -2,9 +2,9 @@ import Image from "next/image";
 import BarsIcon from "./icons/bars";
 import PlusIcon from "./icons/plus";
 import SearchInput from "./icons/searchInput";
-import { cn } from "@/lib/utils";
 import UserIcon from "./icons/user";
 import { Dispatch, SetStateAction } from "react";
+import SignUp from "./signup";
 
 export default function Navbar({
   sidebar,
@@ -36,10 +36,7 @@ export default function Navbar({
           className='cursor-pointer size-8 hover:scale-110 transition-all duration-500 ease-in-out bg-[#0076bd] hover:bg-[#f89b44] rounded-lg text-white'
           strokeWidth={1}
         />
-        <UserIcon
-          className='cursor-pointer size-8 hover:scale-110 transition-all duration-500 ease-in-out text-white'
-          strokeWidth={1}
-        />
+        <SignUp />
       </div>
       <SearchInput className='flex w-[100%] h-[50%] lg:hidden justify-center items-center' />
     </div>

@@ -4,6 +4,7 @@ import { RefObject, useEffect, useRef, useState } from "react";
 import Sidebar from "./sidebar";
 import Navbar from "./navbar";
 import Content from "./content";
+import SignUp from "./signup";
 
 export default function Container() {
   const [sidebar, setSidebar] = useState(false);
