@@ -8,6 +8,7 @@ import SignUp from "./signup";
 
 export default function Container() {
   const [sidebar, setSidebar] = useState(false);
+  const [signUp, setSignUp] = useState(false);
 
   const sidebarRef = useRef<HTMLDivElement | undefined>(undefined);
 
@@ -38,8 +39,11 @@ export default function Container() {
       <Navbar
         setSidebar={setSidebar}
         sidebar={sidebar}
+        signUp={signUp}
+        setSignUp={setSignUp}
       />
       <Content sidebar={sidebar} />
+      {signUp && <SignUp />}
     </div>
   );
 }

@@ -7,6 +7,7 @@ export default function UserIcon(props) {
       fill='none'
       viewBox='0 0 24 24'
       strokeWidth={props.strokeWidth}
+      onClick={props.onClick}
       stroke='currentColor'
       className={cn("", props.className)}>
       <path
