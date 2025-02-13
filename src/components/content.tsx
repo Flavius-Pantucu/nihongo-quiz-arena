@@ -13,7 +13,7 @@ export default function Content({ sidebar }: { sidebar: boolean }) {
             Recents
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full min-h-[200px] h-auto rounded-lg'>
-            <div className='flex flex-row items-center hover:bg-slate-600 translate-all duration-300 ease-in-out rounded-md h-[75px] w-full p-4 gap-2'>
+            <div className='flex flex-row items-center hover:bg-slate-600 translate-all duration-300 ease-in-out rounded-md h-[75px] w-full p-4 gap-2 cursor-pointer'>
               <div className='flex justify-center items-center h-[44px] aspect-square bg-slate-600 rounded-lg'>
                 <FlashcardIcon
                   className='size-6 text-[#51cfff]'
@@ -29,7 +29,7 @@ export default function Content({ sidebar }: { sidebar: boolean }) {
                 </div>
               </div>
             </div>
-            <div className='flex flex-row items-center hover:bg-slate-600 translate-all duration-300 ease-in-out rounded-md h-[75px] w-full p-4 gap-2'>
+            <div className='flex flex-row items-center hover:bg-slate-600 translate-all duration-300 ease-in-out rounded-md h-[75px] w-full p-4 gap-2 cursor-pointer'>
               <div className='flex justify-center items-center h-[44px] aspect-square bg-slate-600 rounded-lg'>
                 <FlashcardIcon
                   className='size-6 text-[#51cfff]'
