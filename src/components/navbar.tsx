@@ -54,12 +54,12 @@ export default function Navbar({
       <div className='w-[50%] lg:w-[33%] h-[50%] lg:h-full flex justify-end items-center gap-4'>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <div>
+            <button>
               <PlusIcon
                 className='cursor-pointer size-8 hover:scale-110 transition-all duration-500 ease-in-out bg-[#0076bd] hover:bg-[#f89b44] rounded-lg text-white'
                 strokeWidth={1}
               />
-            </div>
+            </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align='end'
