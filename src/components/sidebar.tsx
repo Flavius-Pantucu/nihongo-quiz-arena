@@ -5,14 +5,7 @@ import FolderIcon from "./icons/folder";
 import HomeIcon from "./icons/home";
 import LearnIcon from "./icons/learn";
 import QuizIcon from "./icons/quiz";
-import {
-  Dispatch,
-  Ref,
-  RefObject,
-  SetStateAction,
-  useEffect,
-  useRef,
-} from "react";
+import { Dispatch, Ref, SetStateAction, useEffect, useRef } from "react";
 
 export default function Sidebar({
   sidebar,

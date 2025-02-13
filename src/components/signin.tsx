@@ -81,7 +81,7 @@ export default function SignIn({
         </div>
         <div className='flex w-full px-10 h-auto justify-between text-slate-400 text-xs mt-2'>
           <div>
-            Don't have an account?
+            Don&apos;t have an account?
             <span
               className='px-1 cursor-pointer underline text-blue-500'
               onClick={() => {
