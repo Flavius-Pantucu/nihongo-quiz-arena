@@ -6,7 +6,7 @@ import QuizIcon from "./icons/quiz";
 
 export default function ContentSidebar() {
   return (
-    <div className='hidden lg:flex w-40 flex-col pl-4 lg:pl-6 gap-y-2'>
+    <div className='hidden lg:flex w-40 h-[250px] flex-col pl-4 lg:pl-6 gap-y-2'>
       <div className='group/item w-full h-full flex flex-row gap-x-2'>
         <div className='w-auto h-auto cursor-pointer rounded-lg p-2 text-slate-300 hover:bg-slate-600 hover:text-[#f89b44] transition-colors ease-in-out duration-300 '>
           <HomeIcon
@@ -56,7 +56,7 @@ export default function ContentSidebar() {
         <div className='w-auto h-auto cursor-pointer rounded-lg p-2 text-slate-300 hover:bg-slate-600 hover:text-[#f89b44] transition-colors ease-in-out duration-300 '>
           <FlashcardIcon
             className='size-6'
-            strokeWidth='2'
+            strokeWidth='0.1'
           />
         </div>
         <div className='flex items-center group/description invisible group-hover/item:visible px-2 my-1 bg-slate-500 rounded-md text-white text-xs'>

@@ -88,7 +88,7 @@ export default function Sidebar({
         <div className='flex flex-row justify-start items-start w-[100%] max-w-[200px] cursor-pointer gap-x-6 rounded-lg p-2 text-slate-300 hover:bg-slate-600 hover:text-[#f89b44] transition-colors ease-in-out duration-300'>
           <FlashcardIcon
             className='size-6'
-            strokeWidth='2'
+            strokeWidth='.1'
           />
           <span>Flashcards</span>
         </div>
