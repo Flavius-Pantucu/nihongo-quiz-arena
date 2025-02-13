@@ -8,6 +8,7 @@ config({ path: ".env" });
 export default function Home() {
   const sql = neon(process.env.DATABASE_URL!);
   const db = drizzle({ client: sql });
+  db.select();
 
   return (
     <div className='w-full h-screen bg-[#1b263b]'>
