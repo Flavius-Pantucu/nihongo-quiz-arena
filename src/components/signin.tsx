@@ -2,7 +2,7 @@ import { Dispatch, Ref, SetStateAction, useEffect, useRef } from "react";
 import CloseIcon from "./icons/close";
 import Image from "next/image";
 
-export default function SignUp({
+export default function SignIn({
   signUp,
   setSignUp,
   signIn,
@@ -13,15 +13,15 @@ export default function SignUp({
   signIn: boolean;
   setSignIn: Dispatch<SetStateAction<boolean>>;
 }) {
-  const signUpRef = useRef<HTMLDivElement | undefined>(undefined);
+  const signInRef = useRef<HTMLDivElement | undefined>(undefined);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
-        signUpRef.current &&
-        !signUpRef.current.contains(e.target as Element)
+        signInRef.current &&
+        !signInRef.current.contains(e.target as Element)
       ) {
-        setSignUp(false);
+        setSignIn(false);
       }
     };
 
@@ -29,19 +29,19 @@ export default function SignUp({
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [signUpRef]);
+  }, [signInRef]);
 
   return (
     <div
       className={`absolute w-full h-full flex justify-center items-center left-0 top-0 z-10 bg-[#1b263b]/90`}>
       <div
         className='flex flex-col w-full max-w-[475px] h-auto min-h-[300px] p-2 m-4 bg-[#1b263b] border-[1.5px] border-slate-700 rounded-lg'
-        ref={signUpRef as Ref<HTMLDivElement> | undefined}>
+        ref={signInRef as Ref<HTMLDivElement> | undefined}>
         <div className='flex w-full h-auto justify-end'>
           <CloseIcon
             className='cursor-pointer size-5 hover:scale-110 transition-transform duration-200 ease-in-out text-white bg-slate-600 rounded-full p-[2px]'
             strokeWidth={1.5}
-            onClick={() => setSignUp(!signUp)}
+            onClick={() => setSignIn(!signIn)}
           />
         </div>
         <div className='flex w-full px-10 h-auto justify-center text-white text-2xl font-bold mt-2'>
@@ -53,28 +53,18 @@ export default function SignUp({
             alt='nqa'></Image>
         </div>
         <div className='flex w-full px-10 h-auto justify-start text-white text-2xl font-bold mt-2'>
-          Register
+          Login
         </div>
         <div className='flex w-full px-10 h-auto justify-start text-slate-400 text-xs mt-1'>
           By continuing, you agree to our User Agreement and acknowledge that
           you understand the Privacy Policy.
         </div>
         <div className='flex w-full px-10 h-auto flex-col justify-start mt-4 gap-y-1'>
-          <div className='text-slate-300 text-sm'>Username</div>
+          <div className='text-slate-300 text-sm'>Username or Email</div>
           <div>
             <input
               type='text'
               placeholder='ex. gojo-satoru'
-              className='w-full bg-slate-200 rounded-md min-h-8 focus:outline-0 px-3 py-2 text-slate-800 placeholder-slate-500'
-            />
-          </div>
-        </div>
-        <div className='flex w-full px-10 h-auto flex-col justify-start mt-4 gap-y-1'>
-          <div className='text-slate-300 text-sm'>Email</div>
-          <div>
-            <input
-              type='email'
-              placeholder='ex. gojosatoru@jjk.jp'
               className='w-full bg-slate-200 rounded-md min-h-8 focus:outline-0 px-3 py-2 text-slate-800 placeholder-slate-500'
             />
           </div>
@@ -89,33 +79,28 @@ export default function SignUp({
             />
           </div>
         </div>
-        <div className='flex w-full px-10 h-auto flex-col justify-start mt-4 gap-y-1'>
-          <div className='text-slate-300 text-sm'>Confirm password</div>
+        <div className='flex w-full px-10 h-auto justify-between text-slate-400 text-xs mt-2'>
           <div>
-            <input
-              type='password'
-              placeholder='••••••••'
-              className='w-full bg-slate-200 rounded-md min-h-8 focus:outline-0 px-3 py-2 text-slate-800 placeholder-slate-500'
-            />
+            Don't have an account?
+            <span
+              className='px-1 cursor-pointer underline text-blue-500'
+              onClick={() => {
+                setSignUp(!signUp);
+                setSignIn(!signIn);
+              }}>
+              Sign Up
+            </span>
           </div>
-        </div>
-        <div className='flex w-full px-10 h-auto justify-start text-slate-400 text-xs mt-2'>
-          Already have an account?
-          <span
-            className='px-1 cursor-pointer underline text-blue-500'
-            onClick={() => {
-              setSignUp(!signUp);
-              setSignIn(!signIn);
-            }}>
-            Sign In
-          </span>
+          <div className='px-1 cursor-pointer underline text-blue-500'>
+            Forgot password?
+          </div>
         </div>
         <div className='flex w-full px-10 h-auto flex-col justify-start my-6'>
           <div>
             <button
               type='submit'
               className='w-full bg-[#0076bd] hover:bg-[#f89b44] cursor-pointer transition-all duration-500 ease-in-out rounded-md min-h-8 py-2 text-slate-200'>
-              Register
+              Login
             </button>
           </div>
         </div>
