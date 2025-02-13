@@ -5,7 +5,6 @@ import FolderIcon from "./icons/folder";
 import HomeIcon from "./icons/home";
 import LearnIcon from "./icons/learn";
 import QuizIcon from "./icons/quiz";
-import { cn } from "@/lib/utils";
 import { Dispatch, RefObject, SetStateAction } from "react";
 
 export default function Sidebar({

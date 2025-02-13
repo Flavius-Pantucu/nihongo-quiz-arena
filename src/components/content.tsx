@@ -1,4 +1,3 @@
-import { Dispatch, SetStateAction } from "react";
 import ContentSidebar from "./content-sidebar";
 
 export default function Content({ sidebar }: { sidebar: boolean }) {

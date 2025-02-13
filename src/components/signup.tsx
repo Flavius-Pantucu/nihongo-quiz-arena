@@ -8,6 +8,10 @@ export default function SignUp({
   setSignUp: Dispatch<SetStateAction<boolean>>;
 }) {
   return (
-    <div className='absolute w-full h-full left-0 top-0 z-10 bg-white'>TBD</div>
+    <div
+      className='absolute w-full h-full left-0 top-0 z-10 bg-white'
+      onClick={() => setSignUp(!signUp)}>
+      TBD
+    </div>
   );
 }

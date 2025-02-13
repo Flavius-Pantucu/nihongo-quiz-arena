@@ -24,7 +24,7 @@ export default function Navbar({
         <BarsIcon
           className='cursor-pointer size-8 hover:scale-110 transition-transform duration-200 ease-in-out text-white'
           strokeWidth={1.5}
-          onClick={() => setSignUp(!signUp)}
+          onClick={() => setSidebar(!sidebar)}
         />
         <Image
           src={"/nqa.png"}
