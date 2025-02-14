@@ -25,7 +25,7 @@ export default function Content({ sidebar }: { sidebar: boolean }) {
       <ContentSidebar />
       <div className='flex flex-grow justify-center'>
         <div className='flex flex-col items-center w-full px-4 max-w-[1500px]'>
-          {/* <div className='flex items-start w-[90%] lg:w-full text-lg font-semibold text-slate-200 mb-2'>
+          <div className='flex items-start w-[90%] lg:w-full text-lg font-semibold text-slate-200 mb-2'>
             Recents
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-[90%] lg:w-full mb-4 h-auto rounded-lg'>
@@ -64,7 +64,7 @@ export default function Content({ sidebar }: { sidebar: boolean }) {
           </div>
           <div className='flex items-start w-[90%] lg:w-full text-lg font-semibold text-slate-200 mb-2'>
             Popular flashcards sets
-          </div> */}
+          </div>
           <div className='flex w-[80%] lg:w-full'>
             <Carousel className='w-full'>
               <CarouselContent className='ml-0'>
