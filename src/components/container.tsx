@@ -11,6 +11,7 @@ export default function Container() {
   const [sidebar, setSidebar] = useState(false);
   const [signUp, setSignUp] = useState(false);
   const [signIn, setSignIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   return (
     <div className='w-full h-auto min-h-screen'>
@@ -19,10 +20,12 @@ export default function Container() {
         sidebar={sidebar}
       />
       <Navbar
-        setSidebar={setSidebar}
         sidebar={sidebar}
+        setSidebar={setSidebar}
         signUp={signUp}
         setSignUp={setSignUp}
+        isLoggedIn={isLoggedIn}
+        setIsLoggedIn={setIsLoggedIn}
       />
       <Content sidebar={sidebar} />
       {signUp && (

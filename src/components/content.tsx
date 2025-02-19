@@ -18,6 +18,8 @@ import {
   CardTitle,
 } from "./ui/card";
 import UsersIcon from "./icons/users";
+import PublicIcon from "./icons/public";
+import PrivateIcon from "./icons/private";
 
 export default function Content({ sidebar }: { sidebar: boolean }) {
   return (
@@ -187,6 +189,182 @@ export default function Content({ sidebar }: { sidebar: boolean }) {
                         <AvatarImage src='https://github.com/shadcn.png' />
                         <AvatarFallback>F</AvatarFallback>
                       </Avatar>
+                    </CardFooter>
+                  </Card>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className='-left-10 border-0 cursor-pointer bg-slate-600 hover:bg-slate-500 text-slate-300 hover:text-slate-200' />
+              <CarouselNext className='-right-10 border-0 cursor-pointer bg-slate-600 hover:bg-slate-500 text-slate-300 hover:text-slate-200' />
+            </Carousel>
+          </div>
+          <div className='flex items-start w-[90%] lg:w-full text-lg font-semibold text-slate-200 mt-8 mb-2'>
+            Popular classes
+          </div>
+          <div className='flex w-[80%] lg:w-full'>
+            <Carousel className='w-full'>
+              <CarouselContent className='ml-0'>
+                <CarouselItem className='flex justify-center items-center lg:basis-1/2 xl:basis-1/3 px-1 h-[200px]'>
+                  <Card className='w-full h-full rounded-lg bg-slate-700 border-slate-600 cursor-pointer hover:border-b-3 hover:border-b-[#51cfff] transition-all duration-100 ease-in-out'>
+                    <CardHeader>
+                      <CardTitle className='font-semibold text-lg text-slate-200'>
+                        JLPT N5 Class
+                      </CardTitle>
+                      <CardDescription>
+                        <span className='text-xs bg-slate-600 text-slate-200 px-[8.5px] py-1 rounded-xl font-semibold'>
+                          31 members
+                        </span>
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent> </CardContent>
+                    <CardFooter className='flex flex-row justify-between pt-6'>
+                      <div className='flex flex-row'>
+                        <span className='text-slate-200 text-md font-semibold'>
+                          by mikunakano
+                        </span>
+                        <Avatar className='w-8 h-8 ml-2'>
+                          <AvatarImage src='https://avatarfiles.alphacoders.com/224/224251.png' />
+                          <AvatarFallback>F</AvatarFallback>
+                        </Avatar>
+                      </div>
+                      <span className='text-xs bg-slate-600 text-slate-200 px-[8.5px] py-1 rounded-xl font-semibold flex flex-row gap-x-1'>
+                        <PublicIcon
+                          className='size-4'
+                          strokeWidth={2}
+                        />
+                        Public
+                      </span>
+                    </CardFooter>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem className='flex justify-center items-center lg:basis-1/2 xl:basis-1/3 px-1 h-[200px]'>
+                  <Card className='w-full h-full rounded-lg bg-slate-700 border-slate-600 cursor-pointer hover:border-b-3 hover:border-b-[#51cfff] transition-all duration-100 ease-in-out'>
+                    <CardHeader>
+                      <CardTitle className='font-semibold text-lg text-slate-200'>
+                        History Class
+                      </CardTitle>
+                      <CardDescription>
+                        <span className='text-xs bg-slate-600 text-slate-200 px-[8.5px] py-1 rounded-xl font-semibold'>
+                          10 members
+                        </span>
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent> </CardContent>
+                    <CardFooter className='flex flex-row justify-between pt-6'>
+                      <div className='flex flex-row'>
+                        <span className='text-slate-200 text-md font-semibold'>
+                          by tanjirokamado
+                        </span>
+                        <Avatar className='w-8 h-8 ml-2'>
+                          <AvatarImage src='https://i.pinimg.com/474x/52/cc/00/52cc0079b27fc6f940680142d60b60a0.jpg' />
+                          <AvatarFallback>F</AvatarFallback>
+                        </Avatar>
+                      </div>
+                      <span className='text-xs bg-slate-600 text-slate-200 px-[8.5px] py-1 rounded-xl font-semibold flex flex-row gap-x-1'>
+                        <PublicIcon
+                          className='size-4'
+                          strokeWidth={2}
+                        />
+                        Public
+                      </span>
+                    </CardFooter>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem className='flex justify-center items-center lg:basis-1/2 xl:basis-1/3 px-1 h-[200px]'>
+                  <Card className='w-full h-full rounded-lg bg-slate-700 border-slate-600 cursor-pointer hover:border-b-3 hover:border-b-[#51cfff] transition-all duration-100 ease-in-out'>
+                    <CardHeader>
+                      <CardTitle className='font-semibold text-lg text-slate-200'>
+                        Math Class
+                      </CardTitle>
+                      <CardDescription>
+                        <span className='text-xs bg-slate-600 text-slate-200 px-[8.5px] py-1 rounded-xl font-semibold'>
+                          78 members
+                        </span>
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent> </CardContent>
+                    <CardFooter className='flex flex-row justify-between pt-6'>
+                      <div className='flex flex-row'>
+                        <span className='text-slate-200 text-md font-semibold'>
+                          by flavius98
+                        </span>
+                        <Avatar className='w-8 h-8 ml-2'>
+                          <AvatarImage src='https://github.com/shadcn.png' />
+                          <AvatarFallback>F</AvatarFallback>
+                        </Avatar>
+                      </div>
+                      <span className='text-xs bg-slate-600 text-slate-200 px-[8.5px] py-1 rounded-xl font-semibold flex flex-row gap-x-1'>
+                        <PrivateIcon
+                          className='size-4'
+                          strokeWidth={2}
+                        />
+                        Private
+                      </span>
+                    </CardFooter>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem className='flex justify-center items-center lg:basis-1/2 xl:basis-1/3 px-1 h-[200px]'>
+                  <Card className='w-full h-full rounded-lg bg-slate-700 border-slate-600 cursor-pointer hover:border-b-3 hover:border-b-[#51cfff] transition-all duration-100 ease-in-out'>
+                    <CardHeader>
+                      <CardTitle className='font-semibold text-lg text-slate-200'>
+                        JLPT N4 Class
+                      </CardTitle>
+                      <CardDescription>
+                        <span className='text-xs bg-slate-600 text-slate-200 px-[8.5px] py-1 rounded-xl font-semibold'>
+                          15 members
+                        </span>
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent> </CardContent>
+                    <CardFooter className='flex flex-row justify-between pt-6'>
+                      <div className='flex flex-row'>
+                        <span className='text-slate-200 text-md font-semibold'>
+                          by mikunakano
+                        </span>
+                        <Avatar className='w-8 h-8 ml-2'>
+                          <AvatarImage src='https://avatarfiles.alphacoders.com/224/224251.png' />
+                          <AvatarFallback>F</AvatarFallback>
+                        </Avatar>
+                      </div>
+                      <span className='text-xs bg-slate-600 text-slate-200 px-[8.5px] py-1 rounded-xl font-semibold flex flex-row gap-x-1'>
+                        <PublicIcon
+                          className='size-4'
+                          strokeWidth={2}
+                        />
+                        Public
+                      </span>
+                    </CardFooter>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem className='flex justify-center items-center lg:basis-1/2 xl:basis-1/3 px-1 h-[200px]'>
+                  <Card className='w-full h-full rounded-lg bg-slate-700 border-slate-600 cursor-pointer hover:border-b-3 hover:border-b-[#51cfff] transition-all duration-100 ease-in-out'>
+                    <CardHeader>
+                      <CardTitle className='font-semibold text-lg text-slate-200'>
+                        Crypto Trading Class
+                      </CardTitle>
+                      <CardDescription>
+                        <span className='text-xs bg-slate-600 text-slate-200 px-[8.5px] py-1 rounded-xl font-semibold'>
+                          1337 members
+                        </span>
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent> </CardContent>
+                    <CardFooter className='flex flex-row justify-between pt-6'>
+                      <div className='flex flex-row'>
+                        <span className='text-slate-200 text-md font-semibold'>
+                          by gojoxsatoru
+                        </span>
+                        <Avatar className='w-8 h-8 ml-2'>
+                          <AvatarImage src='https://avatarfiles.alphacoders.com/320/320973.jpg' />
+                          <AvatarFallback>F</AvatarFallback>
+                        </Avatar>
+                      </div>
+                      <span className='text-xs bg-slate-600 text-slate-200 px-[8.5px] py-1 rounded-xl font-semibold flex flex-row gap-x-1'>
+                        <PrivateIcon
+                          className='size-4'
+                          strokeWidth={2}
+                        />
+                        Public
+                      </span>
                     </CardFooter>
                   </Card>
                 </CarouselItem>

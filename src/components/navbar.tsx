@@ -9,22 +9,31 @@ import {
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
+  DropdownMenuLabel,
 } from "@/components/ui/dropdown-menu";
 import FlashcardIcon from "./icons/flashcard";
 import FolderIcon from "./icons/folder";
 import UsersIcon from "./icons/users";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import SettingsIcon from "./icons/settings";
+import LogoutIcon from "./icons/logout";
 
 export default function Navbar({
   sidebar,
   setSidebar,
   signUp,
   setSignUp,
+  isLoggedIn,
+  setIsLoggedIn,
 }: {
   sidebar: boolean;
   setSidebar: Dispatch<SetStateAction<boolean>>;
   signUp: boolean;
   setSignUp: Dispatch<SetStateAction<boolean>>;
+  isLoggedIn: boolean;
+  setIsLoggedIn: Dispatch<SetStateAction<boolean>>;
 }) {
   return (
     <div
@@ -82,11 +91,61 @@ export default function Navbar({
             </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>
-        <UserIcon
-          className='cursor-pointer size-8 hover:scale-110 transition-all duration-500 ease-in-out text-white'
-          strokeWidth={1}
-          onClick={() => setSignUp(!signUp)}
-        />
+        {isLoggedIn == false ? (
+          <UserIcon
+            className='cursor-pointer size-8 hover:scale-110 transition-all duration-500 ease-in-out text-white'
+            strokeWidth={1}
+            onClick={() => setSignUp(!signUp)}
+          />
+        ) : (
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <div>
+                <Avatar className='w-8 h-8 cursor-pointer hover:scale-110 transition-all duration-500 ease-in-out'>
+                  <AvatarImage src='https://github.com/shadcn.png' />
+                  <AvatarFallback>F</AvatarFallback>
+                </Avatar>
+              </div>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent
+              align='end'
+              className='w-64 text-white bg-[#1b263b] mt-2 text-slate-200 border-slate-500'>
+              <DropdownMenuGroup>
+                <DropdownMenuLabel className='flex flex-row items-center m-2 gap-x-2'>
+                  <Avatar className='w-10 h-10'>
+                    <AvatarImage src='https://github.com/shadcn.png' />
+                    <AvatarFallback>F</AvatarFallback>
+                  </Avatar>
+                  <div className='flex flex-grow flex-col'>
+                    <div className='text-md font-bold text-slate-200'>
+                      flavius98
+                    </div>
+                    <div className='text-xs text-slate-300'>
+                      flaviuspantucu@icloud.com
+                    </div>
+                  </div>
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator className='bg-slate-500' />
+                <DropdownMenuItem className='h-10 px-6 cursor-pointer'>
+                  <SettingsIcon
+                    className='size-6'
+                    strokeWidth='2'
+                  />
+                  Settings
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  className='h-10 px-6 cursor-pointer'
+                  onClick={() => setIsLoggedIn(false)}>
+                  <LogoutIcon
+                    className='size-6'
+                    strokeWidth='2'
+                  />
+                  Logout
+                </DropdownMenuItem>
+              </DropdownMenuGroup>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        )}
       </div>
       <SearchInput className='flex w-[100%] h-[50%] lg:hidden justify-center items-center' />
     </div>

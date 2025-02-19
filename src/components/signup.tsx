@@ -110,7 +110,7 @@ export default function SignUp({
             Sign In
           </span>
         </div>
-        <div className='flex w-full px-10 h-auto flex-col justify-start my-6'>
+        <div className='flex w-full px-10 h-auto flex-col justify-start mt-6 mb-12'>
           <div>
             <button
               type='submit'
