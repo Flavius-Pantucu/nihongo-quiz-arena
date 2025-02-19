@@ -11,7 +11,7 @@ export default function Home() {
   db.select();
 
   return (
-    <div className='w-full h-screen bg-[#1b263b]'>
+    <div className='w-full h-screen'>
       <Container />
     </div>
   );
