@@ -363,7 +363,7 @@ export default function Content({ sidebar }: { sidebar: boolean }) {
                           className='size-4'
                           strokeWidth={2}
                         />
-                        Public
+                        Private
                       </span>
                     </CardFooter>
                   </Card>
