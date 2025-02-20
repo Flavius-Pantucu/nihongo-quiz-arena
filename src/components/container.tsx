@@ -11,7 +11,7 @@ export default function Container() {
   const [sidebar, setSidebar] = useState(false);
   const [signUp, setSignUp] = useState(false);
   const [signIn, setSignIn] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <div className='w-full h-auto min-h-screen'>
