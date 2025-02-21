@@ -12,22 +12,8 @@ export default function Container() {
   return (
     <div className='w-full h-auto min-h-screen'>
       <Content />
-      {signUp && (
-        <SignUp
-          signUp={signUp}
-          setSignUp={setSignUp}
-          signIn={signIn}
-          setSignIn={setSignIn}
-        />
-      )}
-      {signIn && (
-        <SignIn
-          signUp={signUp}
-          setSignUp={setSignUp}
-          signIn={signIn}
-          setSignIn={setSignIn}
-        />
-      )}
+      {signUp && <SignUp />}
+      {signIn && <SignIn />}
     </div>
   );
 }
