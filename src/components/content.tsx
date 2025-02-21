@@ -1,4 +1,3 @@
-import ContentSidebar from "./content-sidebar";
 import FlashcardIcon from "./icons/flashcard";
 import {
   Carousel,
@@ -21,14 +20,12 @@ import UsersIcon from "./icons/users";
 import PublicIcon from "./icons/public";
 import PrivateIcon from "./icons/private";
 
-export default function Content({ sidebar }: { sidebar: boolean }) {
+export default function Content() {
   return (
     <div
-      className={`w-full h-auto min-h-[1000px] pt-6 transition-opacity duration-200 ease-in-out z-[8] 
-        ${sidebar ? "opacity-20" : "opacity-100"}`}>
-      <ContentSidebar />
+      className={`w-full h-auto min-h-[1000px] pt-6 transition-opacity duration-200 ease-in-out z-[8]`}>
       <div className='flex flex-grow justify-center'>
-        <div className='flex flex-col items-center w-full lg:w-[80%] px-4 max-w-[1500px]'>
+        <div className='flex flex-col items-center w-full px-4 max-w-[1500px]'>
           <div className='flex items-start w-[90%] lg:w-full text-lg font-semibold text-slate-200 mb-2'>
             Recents
           </div>

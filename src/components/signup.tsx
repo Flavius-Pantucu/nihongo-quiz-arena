@@ -4,6 +4,8 @@ import Image from "next/image";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import bcrypt from "bcryptjs";
+import { UserTable } from "@/drizzle/schema/user";
 
 const passwordValidation = new RegExp(
   /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/
@@ -40,7 +42,7 @@ const formSchema = z
 
 type SchemaProps = z.infer<typeof formSchema>;
 
-export default function SignUp({
+export default async function SignUp({
   signUp,
   setSignUp,
   signIn,
@@ -59,8 +61,14 @@ export default function SignUp({
     resolver: zodResolver(formSchema),
   });
 
-  function submitForm(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function submitForm(values: z.infer<typeof formSchema>) {
+    const user: typeof UserTable.$inferInsert = {
+      username: values.username,
+      email: values.email,
+      password: bcrypt.hashSync(values.password, 10),
+    };
+
+    console.log("New user created!");
   }
 
   const signUpRef = useRef<HTMLDivElement | undefined>(undefined);
