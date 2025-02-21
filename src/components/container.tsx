@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Sidebar from "./sidebar";
-import Navbar from "./navbar";
 import Content from "./content";
 import SignUp from "./signup";
 import SignIn from "./signin";
