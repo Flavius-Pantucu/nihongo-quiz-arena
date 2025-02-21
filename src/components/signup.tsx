@@ -41,7 +41,7 @@ const formSchema = z
 
 type SchemaProps = z.infer<typeof formSchema>;
 
-export default async function SignUp() {
+export default function SignUp() {
   const {
     register,
     handleSubmit,
@@ -50,7 +50,7 @@ export default async function SignUp() {
     resolver: zodResolver(formSchema),
   });
 
-  async function submitForm(values: z.infer<typeof formSchema>) {
+  function submitForm(values: z.infer<typeof formSchema>) {
     const user: typeof UserTable.$inferInsert = {
       username: values.username,
       email: values.email,
