@@ -1,4 +1,3 @@
-import { Dispatch, Ref, SetStateAction, useEffect, useRef } from "react";
 import CloseIcon from "./icons/close";
 import Image from "next/image";
 import { z } from "zod";
