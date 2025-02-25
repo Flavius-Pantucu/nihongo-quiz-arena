@@ -10,7 +10,7 @@ export default function Container() {
   const [signIn] = useState(false);
 
   return (
-    <div className='w-full h-auto min-h-screen mt-2'>
+    <div className='w-full h-auto min-h-screen mt-4'>
       <Content />
       {signUp && <SignUp />}
       {signIn && <SignIn />}

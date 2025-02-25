@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#1b263b]`}>
         <SidebarProvider>
           <AppSidebar />
-          <SidebarTrigger className='text-slate-200 size-8 aspect-square m-2' />
+          <SidebarTrigger className='text-slate-300 hover:text-slate-200 hover:bg-slate-600 transition-all duration-300 ease-in-out cursor-pointer size-8 aspect-square m-2 absolute left-0 top-0' />
           {children}
         </SidebarProvider>
       </body>
