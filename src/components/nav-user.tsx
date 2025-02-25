@@ -7,8 +7,6 @@ import {
   CreditCard,
   LogOut,
   Sparkles,
-  User,
-  XIcon,
 } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -28,16 +26,6 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import { ReactNode, useState } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "./ui/dialog";
-import UserIcon from "./icons/user";
-import Image from "next/image";
 import SignIn from "./signin";
 
 export function NavUser({
