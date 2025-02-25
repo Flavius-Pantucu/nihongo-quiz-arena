@@ -34,7 +34,7 @@ export default function SignIn({
         />
         <DialogHeader>
           <DialogTitle>
-            <div className='flex w-full px-6 h-auto justify-center text-white text-2xl font-bold mt-2'>
+            <div className='flex w-full lg:px-6 h-auto justify-center text-white text-2xl font-bold mt-2'>
               <Image
                 src={"/nqa.png"}
                 width={35}
@@ -42,16 +42,16 @@ export default function SignIn({
                 className='cursor-pointer w-auto h-[35px] lg:h-[45px]'
                 alt='nqa'></Image>
             </div>
-            <div className='flex w-full px-6 h-auto justify-start text-white text-2xl font-bold mt-2'>
+            <div className='flex w-full lg:px-6 h-auto justify-start text-start text-white text-2xl font-bold mt-2'>
               Login
             </div>
-            <div className='flex w-full px-6 h-auto justify-start text-slate-400 text-xs mt-1'>
+            <div className='flex w-full lg:px-6 h-auto justify-start text-start text-slate-400 text-xs mt-1'>
               By continuing, you agree to our User Agreement and acknowledge
               that you understand the Privacy Policy.
             </div>
           </DialogTitle>
           <DialogDescription>
-            <div className='flex w-full px-6 h-auto flex-col justify-start mt-4 gap-y-1'>
+            <div className='flex w-full lg:px-6 h-auto flex-col justify-start text-start mt-4 gap-y-1'>
               <div className='text-slate-300 text-sm'>Username or Email</div>
               <div>
                 <input
@@ -61,7 +61,7 @@ export default function SignIn({
                 />
               </div>
             </div>
-            <div className='flex w-full px-6 h-auto flex-col justify-start mt-4 gap-y-1'>
+            <div className='flex w-full lg:px-6 h-auto flex-col justify-start text-start mt-4 gap-y-1'>
               <div className='text-slate-300 text-sm'>Password</div>
               <div>
                 <input
@@ -71,7 +71,7 @@ export default function SignIn({
                 />
               </div>
             </div>
-            <div className='flex w-full px-6 h-auto justify-between text-slate-400 text-xs mt-2'>
+            <div className='flex w-full lg:px-6 h-auto justify-between text-slate-400 text-xs mt-2'>
               <div>
                 Don&apos;t have an account?
                 <span className='px-1 cursor-pointer underline text-blue-500'>
@@ -85,7 +85,7 @@ export default function SignIn({
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
-          <div className='flex w-full px-6 h-auto flex-col justify-start mt-6 mb-6'>
+          <div className='flex w-full lg:px-6 h-auto flex-col justify-start mt-2 mb-2'>
             <div>
               <button
                 type='submit'
