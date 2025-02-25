@@ -37,7 +37,7 @@ export function NavUser({
     avatar: string;
   };
 }) {
-  const [isLogged, setIsLogged] = useState(false);
+  const [isLogged] = useState(false);
   const [loginDialog, setLoginDialog] = useState(false);
 
   const { isMobile } = useSidebar();
