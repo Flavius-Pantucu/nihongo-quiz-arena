@@ -88,7 +88,7 @@ export default function RegisterDialog({
         <form onSubmit={handleSubmit(submitForm)}>
           <DialogHeader>
             <DialogTitle>
-              <div className='flex w-full px-6 h-auto justify-center text-white text-2xl font-bold mt-2'>
+              <div className='flex w-full lg:px-6 h-auto justify-center text-white text-2xl font-bold mt-2'>
                 <Image
                   src={"/nqa.png"}
                   width={35}
@@ -96,15 +96,15 @@ export default function RegisterDialog({
                   className='cursor-pointer w-auto h-[35px] lg:h-[45px]'
                   alt='nqa'></Image>
               </div>
-              <div className='flex w-full px-6 h-auto justify-start text-white text-2xl font-bold mt-2'>
+              <div className='flex w-full lg:px-6 h-auto justify-start text-white text-2xl font-bold mt-2'>
                 Register
               </div>
-              <div className='flex w-full px-6 h-auto justify-start text-slate-400 text-xs mt-1'>
+              <div className='flex w-full lg:px-6 h-auto justify-start text-slate-400 text-xs mt-1'>
                 By continuing, you agree to our User Agreement and acknowledge
                 that you understand the Privacy Policy.
               </div>
             </DialogTitle>
-            <div className='flex w-full px-6 h-auto flex-col justify-start mt-3 gap-y-1'>
+            <div className='flex w-full lg:px-6 h-auto flex-col justify-start mt-3 gap-y-1'>
               <label
                 className='text-slate-300 text-sm'
                 htmlFor=''>
@@ -122,7 +122,7 @@ export default function RegisterDialog({
                 </span>
               )}
             </div>
-            <div className='flex w-full px-6 h-auto flex-col justify-start mt-3 gap-y-1'>
+            <div className='flex w-full lg:px-6 h-auto flex-col justify-start mt-3 gap-y-1'>
               <label
                 className='text-slate-300 text-sm'
                 htmlFor=''>
@@ -140,7 +140,7 @@ export default function RegisterDialog({
                 </span>
               )}
             </div>
-            <div className='flex w-full px-6 h-auto flex-col justify-start mt-3 gap-y-1'>
+            <div className='flex w-full lg:px-6 h-auto flex-col justify-start mt-3 gap-y-1'>
               <label
                 className='text-slate-300 text-sm'
                 htmlFor=''>
@@ -158,7 +158,7 @@ export default function RegisterDialog({
                 </span>
               )}
             </div>
-            <div className='flex w-full px-6 h-auto flex-col justify-start mt-3 gap-y-1'>
+            <div className='flex w-full lg:px-6 h-auto flex-col justify-start mt-3 gap-y-1'>
               <label
                 className='text-slate-300 text-sm'
                 htmlFor=''>
@@ -176,7 +176,7 @@ export default function RegisterDialog({
                 </span>
               )}
             </div>
-            <div className='flex w-full px-6 h-auto justify-start text-slate-400 text-xs mt-2'>
+            <div className='flex w-full lg:px-6 h-auto justify-start text-slate-400 text-xs mt-2'>
               Already have an account?
               <span
                 className='px-1 cursor-pointer underline text-blue-500'
@@ -189,7 +189,7 @@ export default function RegisterDialog({
             </div>
           </DialogHeader>
           <DialogFooter>
-            <div className='flex w-full px-6 h-auto flex-col justify-start mt-6 mb-12'>
+            <div className='flex w-full lg:px-6 h-auto flex-col justify-start mt-6 mb-12'>
               <div>
                 <button
                   type='submit'
