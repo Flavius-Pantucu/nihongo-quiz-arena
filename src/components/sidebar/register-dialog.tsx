@@ -7,7 +7,7 @@ import {
   DialogTitle,
 } from "../ui/dialog";
 import { XIcon } from "lucide-react";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
