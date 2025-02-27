@@ -12,9 +12,9 @@ import {
   Folder,
 } from "lucide-react";
 
-import { NavMain } from "@/components/nav-main";
-import { NavUser } from "@/components/nav-user";
-import { NavHeader } from "@/components/nav-header";
+import { NavMain } from "@/components/sidebar/nav-main";
+import { NavUser } from "@/components/sidebar/nav-user";
+import { NavHeader } from "@/components/sidebar/nav-header";
 import {
   Sidebar,
   SidebarContent,
