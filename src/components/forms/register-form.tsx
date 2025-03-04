@@ -3,12 +3,12 @@
 import Image from "next/image";
 import { DialogFooter, DialogHeader, DialogTitle } from "../ui/dialog";
 import { z } from "zod";
-import { UserTable } from "@/drizzle/schema/user";
+import { UserTable } from "@/db/schema/user";
 import bcrypt from "bcryptjs";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Dispatch, SetStateAction } from "react";
-import { createUser } from "@/drizzle/users/users-action";
+import { createUser } from "@/db/users/users-action";
 
 const passwordValidation = new RegExp(
   /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/
@@ -65,9 +65,8 @@ export default function RegisterForm({
       email: values.email,
       password: bcrypt.hashSync(values.password, 10),
     };
-
-    const userCreated = await createUser(user);
-    console.log(userCreated);
+    await createUser(user);
+    console.log("User created");
   }
   return (
     <form onSubmit={handleSubmit(submitForm)}>
