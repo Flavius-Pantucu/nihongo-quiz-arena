@@ -63,6 +63,11 @@ export default function LoginForm({
               placeholder='ex. gojo-satoru'
               className='w-full bg-slate-200 rounded-md min-h-8 focus:outline-0 px-3 py-2 text-slate-800 placeholder-slate-500'
             />
+            {errors?.account && (
+              <span className='text-red-400 text-sm'>
+                {errors.account.message}
+              </span>
+            )}
           </div>
         </div>
         <div className='flex w-full lg:px-6 h-auto flex-col justify-start text-start mt-4 gap-y-1'>
@@ -74,6 +79,11 @@ export default function LoginForm({
               placeholder='••••••••'
               className='w-full bg-slate-200 rounded-md min-h-8 focus:outline-0 px-3 py-2 text-slate-800 placeholder-slate-500'
             />
+            {errors?.password && (
+              <span className='text-red-400 text-sm'>
+                {errors.password.message}
+              </span>
+            )}
           </div>
         </div>
         <div className='flex w-full lg:px-6 h-auto justify-between text-slate-400 text-xs mt-2'>
