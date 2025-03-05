@@ -3,45 +3,13 @@
 import Image from "next/image";
 import { DialogFooter, DialogHeader, DialogTitle } from "../ui/dialog";
 import { z } from "zod";
-import { UserTable } from "@/db/schema/user";
-import bcrypt from "bcryptjs";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Dispatch, SetStateAction } from "react";
-import { createUser } from "@/db/users/users-action";
+import { registerAction } from "@/db/user/user-action";
+import { registerSchema } from "@/db/user/user-schema";
 
-const passwordValidation = new RegExp(
-  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/
-);
-
-const formSchema = z
-  .object({
-    username: z
-      .string()
-      .min(4, {
-        message: "Username must be at least 4 characters.",
-      })
-      .max(32, {
-        message: "Username must be at most 32 characters.",
-      }),
-    email: z
-      .string()
-      .min(1, {
-        message: "Email is required.",
-      })
-      .email({
-        message: "Invalid email address",
-      }),
-    password: z.string().trim().regex(passwordValidation, {
-      message:
-        "Password must be atleast 8 characters long with atleast one uppercase letter, one lowercase letter and one number",
-    }),
-    confirm: z.string().trim(),
-  })
-  .refine((data) => data.password === data.confirm, {
-    message: "Passwords do not match",
-    path: ["confirm"],
-  });
+const formSchema = registerSchema;
 
 type SchemaProps = z.infer<typeof formSchema>;
 export default function RegisterForm({
@@ -60,14 +28,10 @@ export default function RegisterForm({
   });
 
   async function submitForm(values: z.infer<typeof formSchema>) {
-    const user: typeof UserTable.$inferInsert = {
-      username: values.username,
-      email: values.email,
-      password: bcrypt.hashSync(values.password, 10),
-    };
-    await createUser(user);
-    console.log("User created");
+    const response = await registerAction(values);
+    console.log(response);
   }
+
   return (
     <form onSubmit={handleSubmit(submitForm)}>
       <DialogHeader>
